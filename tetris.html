@@ -5,13 +5,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table style="width: 240px; height: 460px; border: 1px solid #333333"cellpadding="0" cellspacing="0" id ="elsScreem"></table>
+    
+<table style="width: 240px; height: 460px;" border=0 cellpadding="0" cellspacing="1" id ="elsScreem"></table>
 <script>
 var elsScreen = "";
 for(var i=0;i<23;i++){
     elsScreen += '<tr>';
     for(var j=0;j<12;j++){
-        elsScreen += '<td style="width: 18px; height: 18px; border: 1px solid #333333" id="td_'+j+'_'+i+'">&nbsp;</td>';
+        elsScreen += '<td style="width: 18px; height: 18px; border: 0px solid #fff" id="td_'+j+'_'+i+'">&nbsp;</td>';
     }
     elsScreen += '</tr>';
 }
@@ -403,17 +404,17 @@ function Game() {
         for(var i = 0;i<this.screen.getH();i++){
             for(var j=0;j<this.screen.getW();j++){
                 if(this.screen.getScreenPoint(i,j) == '1'){
-                    document.getElementById("td_"+j+"_"+i).style.background = "#333333";
+                    document.getElementById("td_"+j+"_"+i).style.background = "#77b2ef";
                 }else{
-                    document.getElementById("td_"+j+"_"+i).style.background = "#FFFFFF";
+                    document.getElementById("td_"+j+"_"+i).style.background = "#ddd";
                 }
             }
         }
         var ShapeScreenPoints = this.shape.getScreenPoint();
-        document.getElementById("td_"+ShapeScreenPoints[0]+"_"+ShapeScreenPoints[1]).style.background = "#333333";
-        document.getElementById("td_"+ShapeScreenPoints[2]+"_"+ShapeScreenPoints[3]).style.background = "#333333";
-        document.getElementById("td_"+ShapeScreenPoints[4]+"_"+ShapeScreenPoints[5]).style.background = "#333333";
-        document.getElementById("td_"+ShapeScreenPoints[6]+"_"+ShapeScreenPoints[7]).style.background = "#333333";
+        document.getElementById("td_"+ShapeScreenPoints[0]+"_"+ShapeScreenPoints[1]).style.background = "#ea8a11";
+        document.getElementById("td_"+ShapeScreenPoints[2]+"_"+ShapeScreenPoints[3]).style.background = "#ea8a11";
+        document.getElementById("td_"+ShapeScreenPoints[4]+"_"+ShapeScreenPoints[5]).style.background = "#ea8a11";
+        document.getElementById("td_"+ShapeScreenPoints[6]+"_"+ShapeScreenPoints[7]).style.background = "#ea8a11";
     };
 }
  
